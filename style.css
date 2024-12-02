@@ -1,0 +1,69 @@
+.game {
+  width: 600px;
+  height: 200px;
+  border-bottom: 1px solid #000;
+  margin: 0 auto;
+  background-color: rgba(245, 240, 240, 0.89);
+}
+
+#player {
+  width: 50px;
+  height: 50px;
+  background-image: url(1.png);
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+}
+
+#damper {
+  width: 40px;
+  height: 40px;
+  background-image: url(2.png);
+  background-size: 40px 40px;
+  position: relative;
+  top: 110px;
+  left: 560px;
+}
+
+.start {
+  width: 600px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  background-color: chartreuse;
+}
+
+.animate {
+  animation: damperMove 2s infinite linear;
+}
+
+.active {
+  animation: jumpActive 0.3s linear;
+}
+
+@keyframes damperMove {
+  0% {
+    left: 560px;
+  }
+  100% {
+    left: -40px;
+  }
+}
+
+@keyframes jumpActive {
+  0% {
+    top: 150px;
+  }
+  20% {
+    top: 100px;
+  }
+  50% {
+    top: 50px;
+  }
+  80% {
+    top: 100px;
+  }
+  100% {
+    top: 150px;
+  }
+}
